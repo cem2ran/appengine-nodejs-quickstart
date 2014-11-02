@@ -2,6 +2,28 @@
 
 A starter project for node.js on Google App Engine Managed VMs using Custom Runtimes.
 
+## Docker 101
+
+To start with install boot2docker using the [latest Mac package](https://github.com/boot2docker/osx-installer/releases "Title")
+
+Then:
+~~~~
+boot2docker init #only required once
+boot2docker start
+~~~~
+
+Export Docker variables. In my case:
+~~~~
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/cem2ran/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+~~~~
+
+Final step before running the appengine locally:
+~~~~
+$(boot2docker shellinit)
+~~~~
+
 ## Usage
 
 Start by cloning this repository.
